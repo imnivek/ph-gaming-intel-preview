@@ -1,869 +1,493 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PH Gaming Intel - Article Preview</title>
-<style>
-  :root {
-    --navy: #1B3A5C;
-    --brick: #B84233;
-    --gold: #C4A35A;
-    --cream: #F5F0E8;
-    --grey-blue: #7A8FA6;
-    --dark: #0D1B2A;
-    --text: #2C3E50;
-    --text-light: #5D6D7E;
-    --border: #D5CFC5;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PH Gaming Intel — Philippines Gaming Industry News &amp; Analysis</title>
+  <meta name="description" content="PH Gaming Intel covers the Philippines gaming industry with in-depth news, regulatory analysis, PAGCOR updates, POGO tracking, and IR resort coverage.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PH Gaming Intel">
+  <meta property="og:title" content="PH Gaming Intel — Philippines Gaming Industry News &amp; Analysis">
+  <meta property="og:description" content="In-depth coverage of the Philippines gaming industry: PAGCOR regulation, IR resorts, online gaming licenses, and POGO developments.">
+  <meta property="og:image" content="hero/manila-bay-4am-hidden-shift-ir-workers.png">
+  <meta property="og:url" content="https://phgamingintel.com/">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PH Gaming Intel — Philippines Gaming Industry News &amp; Analysis">
+  <meta name="twitter:description" content="In-depth coverage of the Philippines gaming industry: PAGCOR regulation, IR resorts, online gaming licenses, and POGO developments.">
+  <meta name="twitter:image" content="hero/manila-bay-4am-hidden-shift-ir-workers.png">
+
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="canonical" href="https://phgamingintel.com/">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://phgamingintel.com/#website",
+        "name": "PH Gaming Intel",
+        "url": "https://phgamingintel.com/",
+        "description": "Philippines gaming industry news, regulatory analysis, and data tools.",
+        "publisher": { "@id": "https://phgamingintel.com/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://phgamingintel.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://phgamingintel.com/#organization",
+        "name": "PH Gaming Intel",
+        "url": "https://phgamingintel.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://phgamingintel.com/logo.png"
+        },
+        "sameAs": []
+      },
+      {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Manila Bay at 4 AM: The Hidden Shift Change Inside PH Integrated Resorts",
+            "url": "https://phgamingintel.com/articles/manila-bay-4am-ir-workers.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Cambodia Gaming License Framework: Three-Tier System Targets Former POGO Operators",
+            "url": "https://phgamingintel.com/articles/cambodia-gaming-license-pogo-operators.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "PAGCOR Privatization Bill SB 2814 Advances in Senate Committee",
+            "url": "https://phgamingintel.com/articles/pagcor-privatization-bill-senate.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Bloomberry Resorts Q1 2026: Revenue Down 18% as VIP Rolling Chip Drops 26%",
+            "url": "https://phgamingintel.com/articles/bloomberry-q1-2026-revenue.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "PIGO vs e-Games: The Regulatory Maze Mapped",
+            "url": "https://phgamingintel.com/articles/pigo-vs-egames-regulatory-maze.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Best PAGCOR Licensed Online Casinos Philippines 2026",
+            "url": "https://phgamingintel.com/articles/best-pagcor-licensed-online-casinos.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Philippine GGR Falls 15.8% to $1.42bn in Q1 2026",
+            "url": "https://phgamingintel.com/articles/philippine-ggr-q1-2026.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "Okada Play Commercial Launch: PhilWeb and Tiger Resort Go Digital",
+            "url": "https://phgamingintel.com/articles/okada-play-commercial-launch.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "Altenar Powers DigiPlus ArenaPlus Sportsbook in the Philippines",
+            "url": "https://phgamingintel.com/articles/altenar-arenaplus-sportsbook.html"
+          }
+        ]
+      }
+    ]
   }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    background: var(--cream);
-    color: var(--text);
-    line-height: 1.7;
-  }
-
-  /* HEADER */
-  header {
-    background: var(--dark);
-    color: #fff;
-    padding: 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-  }
-
-  .header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px 24px;
-  }
-
-  .logo {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 800;
-    font-size: 24px;
-    letter-spacing: -0.5px;
-    color: #fff;
-  }
-
-  .logo span { color: var(--gold); }
-
-  .header-tagline {
-    font-size: 12px;
-    color: var(--grey-blue);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-  }
-
-  .header-nav {
-    background: rgba(255,255,255,0.06);
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .header-nav ul {
-    display: flex;
-    gap: 0;
-    list-style: none;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  .header-nav li a {
-    display: block;
-    padding: 10px 20px;
-    color: var(--grey-blue);
-    text-decoration: none;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.2s, background 0.2s;
-  }
-
-  .header-nav li a:hover,
-  .header-nav li a.active {
-    color: #fff;
-    background: rgba(255,255,255,0.08);
-  }
-
-  /* HERO BANNER */
-  .site-hero {
-    background: linear-gradient(135deg, var(--dark) 0%, var(--navy) 100%);
-    padding: 60px 24px;
-    text-align: center;
-    border-bottom: 3px solid var(--gold);
-  }
-
-  .site-hero h1 {
-    font-size: 42px;
-    color: #fff;
-    font-weight: 800;
-    margin-bottom: 12px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-  }
-
-  .site-hero h1 span { color: var(--gold); }
-
-  .site-hero p {
-    font-size: 16px;
-    color: var(--grey-blue);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-
-  .preview-badge {
-    display: inline-block;
-    background: var(--brick);
-    color: #fff;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 6px 16px;
-    border-radius: 3px;
-    margin-bottom: 20px;
-  }
-
-  /* MAIN */
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 24px;
-  }
-
-  .section-label {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--brick);
-    margin-bottom: 24px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid var(--brick);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .section-label .count {
-    background: var(--brick);
-    color: #fff;
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 11px;
-  }
-
-  /* FEATURED (first article large) */
-  .featured-article {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    margin-bottom: 40px;
-    transition: box-shadow 0.3s;
-  }
-
-  .featured-article:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-  }
-
-  .featured-article .article-image {
-    position: relative;
-    overflow: hidden;
-    min-height: 360px;
-  }
-
-  .featured-article .article-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
-  }
-
-  .featured-article:hover .article-image img {
-    transform: scale(1.03);
-  }
-
-  .featured-article .article-body {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .featured-article .article-body h2 {
-    font-size: 28px;
-    line-height: 1.3;
-    margin-bottom: 16px;
-    color: var(--dark);
-  }
-
-  /* ARTICLE GRID */
-  .article-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 28px;
-    margin-bottom: 60px;
-  }
-
-  .article-card {
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .article-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 28px rgba(0,0,0,0.12);
-  }
-
-  .article-card .article-image {
-    position: relative;
-    overflow: hidden;
-    height: 200px;
-  }
-
-  .article-card .article-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
-  }
-
-  .article-card:hover .article-image img {
-    transform: scale(1.05);
-  }
-
-  .article-card .article-body {
-    padding: 24px;
-  }
-
-  .article-card .article-body h2 {
-    font-size: 20px;
-    line-height: 1.35;
-    margin-bottom: 12px;
-    color: var(--dark);
-  }
-
-  /* SHARED ARTICLE STYLES */
-  .article-meta {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 12px;
-    color: var(--text-light);
-  }
-
-  .tag {
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 3px;
-    font-weight: 700;
-    font-size: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  .tag-news { background: var(--navy); color: #fff; }
-  .tag-analysis { background: var(--brick); color: #fff; }
-  .tag-guide { background: #2E7D32; color: #fff; }
-  .tag-longread { background: #4A148C; color: #fff; }
-  .tag-new { background: var(--gold); color: var(--dark); }
-
-  .score {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-weight: 600;
-    color: var(--gold);
-  }
-
-  .score svg {
-    width: 12px;
-    height: 12px;
-    fill: var(--gold);
-  }
-
-  .article-dek {
-    font-size: 15px;
-    color: var(--text-light);
-    line-height: 1.6;
-    margin-bottom: 16px;
-  }
-
-  .article-source {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 12px;
-    color: var(--grey-blue);
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-  }
-
-  .read-more {
-    display: inline-block;
-    margin-top: 16px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--brick);
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    transition: color 0.2s;
-  }
-
-  .read-more:hover { color: var(--dark); }
-  .read-more::after { content: ' \2192'; }
-
-  /* VALUE SCORE BAR */
-  .score-bar {
-    height: 3px;
-    background: var(--border);
-    border-radius: 2px;
-    margin-top: 12px;
-    overflow: hidden;
-  }
-
-  .score-bar-fill {
-    height: 100%;
-    border-radius: 2px;
-    transition: width 0.6s ease;
-  }
-
-  .score-9 { width: 90%; background: var(--gold); }
-  .score-8 { width: 80%; background: var(--navy); }
-
-  /* IMAGE PLACEHOLDER */
-  .img-placeholder {
-    width: 100%;
-    height: 100%;
-    min-height: 200px;
-    background: linear-gradient(135deg, var(--navy) 0%, var(--dark) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--grey-blue);
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 13px;
-    gap: 8px;
-  }
-
-  .img-placeholder svg {
-    width: 40px;
-    height: 40px;
-    opacity: 0.4;
-  }
-
-  /* EXPAND / FULL ARTICLE */
-  .article-full {
-    display: none;
-    padding: 24px;
-    border-top: 1px solid var(--border);
-    font-size: 15px;
-    line-height: 1.8;
-    color: var(--text);
-  }
-
-  .article-full.open { display: block; }
-
-  .article-full h2 {
-    font-size: 18px;
-    margin: 24px 0 12px 0;
-    color: var(--dark);
-  }
-
-  .article-full p { margin-bottom: 16px; }
-
-  .toggle-btn {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 8px 20px;
-    background: var(--dark);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .toggle-btn:hover { background: var(--navy); }
-
-  /* FOOTER */
-  footer {
-    background: var(--dark);
-    color: var(--grey-blue);
-    padding: 40px 24px;
-    text-align: center;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 13px;
-    line-height: 2;
-  }
-
-  footer .footer-brand {
-    font-size: 18px;
-    font-weight: 800;
-    color: #fff;
-    margin-bottom: 8px;
-  }
-
-  footer .footer-brand span { color: var(--gold); }
-
-  footer a { color: var(--gold); text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
-
-  .rg-banner {
-    background: var(--navy);
-    color: #fff;
-    padding: 16px 24px;
-    text-align: center;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 13px;
-  }
-
-  .rg-banner a { color: var(--gold); }
-
-  /* STATS BAR */
-  .stats-bar {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 20px;
-    background: rgba(255,255,255,0.03);
-    border-top: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .stat-item {
-    text-align: center;
-  }
-
-  .stat-num {
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--gold);
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-  }
-
-  .stat-label {
-    font-size: 11px;
-    color: var(--grey-blue);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    .featured-article {
-      grid-template-columns: 1fr;
-    }
-    .featured-article .article-image {
-      min-height: 220px;
-    }
-    .featured-article .article-body {
-      padding: 24px;
-    }
-    .featured-article .article-body h2 {
-      font-size: 22px;
-    }
-    .article-grid {
-      grid-template-columns: 1fr;
-    }
-    .site-hero h1 { font-size: 28px; }
-    .stats-bar { gap: 20px; flex-wrap: wrap; }
-    .header-nav ul { overflow-x: auto; }
-  }
-</style>
+  </script>
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="header-top">
-    <div class="logo">PH Gaming <span>Intel</span></div>
-    <div class="header-tagline">Philippines & Southeast Asia Gaming Intelligence</div>
+<!-- ============================================
+     RESPONSIBLE GAMING BANNER
+     ============================================ -->
+<div class="rg-banner">
+  18+ only. If you or someone you know has a gambling problem, contact PAGCOR's responsible gaming hotline.
+</div>
+
+<!-- ============================================
+     HEADER
+     ============================================ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="/" class="logo">PH Gaming <span>Intel</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-pills">
+        <li><a href="#latest-news" class="active">News</a></li>
+        <li><a href="#analysis-guides">Analysis</a></li>
+        <li><a href="#" title="Coming soon">Data Tools</a></li>
+        <li><a href="#" title="Coming soon">Regulation</a></li>
+        <li><a href="#" title="Coming soon">POGO Tracker</a></li>
+        <li><a href="#" title="Coming soon">About</a></li>
+      </ul>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
   </div>
-  <nav class="header-nav">
-    <ul>
-      <li><a href="#" class="active">News</a></li>
-      <li><a href="#">Analysis</a></li>
-      <li><a href="#">Data Tools</a></li>
-      <li><a href="#">Regulation</a></li>
-      <li><a href="#">POGO Tracker</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
-  </nav>
 </header>
 
-<!-- SITE HERO -->
-<section class="site-hero">
-  <div class="preview-badge">Content Preview - Internal Use Only</div>
-  <h1>PH Gaming <span>Intel</span></h1>
-  <p>The fastest, deepest, and most credible intelligence hub for the Philippines and Southeast Asian gaming industry.</p>
+<!-- ============================================
+     HERO — Featured Story
+     ============================================ -->
+<section class="hero-featured" aria-label="Featured story">
+  <img src="hero/manila-bay-4am-hidden-shift-ir-workers.png"
+       alt="Manila Bay at dawn — integrated resort workers changing shifts at 4 AM"
+       width="1920" height="1080" loading="eager">
+  <div class="overlay">
+    <div class="overlay-inner">
+      <span class="tag tag-longread">Longread</span>
+      <h1>Manila Bay at 4 AM: The Hidden Shift Change Inside PH Integrated Resorts</h1>
+      <p class="dek">When the high rollers leave and the floor lights dim, a different kind of labor begins. A ground-level investigation into the workforce that keeps Entertainment City running.</p>
+      <p class="meta">May 25, 2026 &middot; 18 min read &middot; Editorial Score 10/10</p>
+      <a href="articles/manila-bay-4am-ir-workers.html" style="display:inline-block;margin-top:16px;padding:12px 28px;border-radius:8px;background:var(--gold);color:var(--dark);font-family:var(--font-ui);font-size:14px;font-weight:700;letter-spacing:.5px;transition:background .2s;">Read the Full Story</a>
+    </div>
+  </div>
 </section>
 
-<!-- STATS -->
-<div style="background: var(--dark);">
-  <div class="stats-bar">
-    <div class="stat-item">
-      <div class="stat-num">9</div>
-      <div class="stat-label">Articles</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">9</div>
-      <div class="stat-label">With Hero Art</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">3</div>
-      <div class="stat-label">Content Types</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">14,200</div>
-      <div class="stat-label">Total Words</div>
+<!-- ============================================
+     LATEST NEWS — 3-Card Grid
+     ============================================ -->
+<section class="mt-section mb-section" id="latest-news" aria-label="Latest news">
+  <div class="section-wrap">
+    <h2 class="section-title">Latest News</h2>
+    <div class="card-grid">
+
+      <!-- Card 1: Cambodia Gaming License -->
+      <a href="articles/cambodia-gaming-license-pogo-operators.html" class="card">
+        <div class="card-img">
+          <img src="hero/cambodia-gaming-license-framework-pogo-operators-2026.png"
+               alt="Cambodia gaming license framework for former POGO operators"
+               width="640" height="360" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="tag tag-news">News</span>
+          <h3>Cambodia Gaming License Framework Targets Former POGO Operators</h3>
+          <p class="card-dek">Three-tier licensing system targeting former POGO operators signals Southeast Asia's next regulatory battleground as displaced firms seek new jurisdictions.</p>
+          <p class="card-meta">May 24, 2026 &middot; Score 9/10</p>
+        </div>
+      </a>
+
+      <!-- Card 2: PAGCOR Privatization -->
+      <a href="articles/pagcor-privatization-bill-senate.html" class="card">
+        <div class="card-img">
+          <img src="hero/pagcor-privatization-bill-senate-committee-2026.png"
+               alt="PAGCOR privatization bill SB 2814 in Senate committee hearing"
+               width="640" height="360" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="tag tag-news">News</span>
+          <h3>PAGCOR Privatization Bill SB 2814 Advances in Senate</h3>
+          <p class="card-dek">SB 2814 proposes separating PAGCOR's role as regulator from operator, marking the most significant restructuring proposal in the agency's 47-year history.</p>
+          <p class="card-meta">May 24, 2026 &middot; Score 9/10</p>
+        </div>
+      </a>
+
+      <!-- Card 3: Bloomberry Q1 -->
+      <a href="articles/bloomberry-q1-2026-revenue.html" class="card">
+        <div class="card-img">
+          <img src="hero/bloomberry-resorts-q1-2026-revenue-solaire.png"
+               alt="Bloomberry Resorts Solaire Q1 2026 revenue report"
+               width="640" height="360" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="tag tag-news">News</span>
+          <h3>Bloomberry Q1 2026: Revenue Drops 18%, VIP Rolling Chip Down 26%</h3>
+          <p class="card-dek">Solaire's parent reports a challenging first quarter as VIP volumes slide amid broader market headwinds hitting the Philippine integrated resort sector.</p>
+          <p class="card-meta">May 23, 2026 &middot; Score 9/10</p>
+        </div>
+      </a>
+
     </div>
   </div>
-</div>
+</section>
 
-<!-- RG BANNER -->
-<div class="rg-banner">
-  PH Gaming Intel reports on the gambling industry but does not endorse betting. If you or someone you know has a gambling problem, seek help.
-</div>
+<!-- ============================================
+     ANALYSIS & GUIDES — 2-Column Layout
+     ============================================ -->
+<section class="mb-section" id="analysis-guides" aria-label="Analysis and guides">
+  <div class="section-wrap">
+    <h2 class="section-title">Analysis &amp; Guides</h2>
+    <div class="card-grid-2">
 
-<main>
+      <!-- Left: Large PIGO vs e-Games card -->
+      <a href="articles/pigo-vs-egames-regulatory-maze.html" class="card card-lg">
+        <div class="card-img">
+          <img src="hero/pigo-vs-egames-regulatory-maze-mapped-2026.png"
+               alt="PIGO vs e-Games regulatory comparison map"
+               width="640" height="360" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="tag tag-analysis">Analysis</span>
+          <h3>PIGO vs e-Games: The Regulatory Maze Mapped</h3>
+          <p class="card-dek">Two parallel online gaming license systems under one regulator. We untangle the overlapping jurisdictions, fee structures, and compliance requirements that define the Philippine online gaming landscape in 2026.</p>
+          <p class="card-meta">May 25, 2026 &middot; Score 9/10</p>
+        </div>
+      </a>
 
+      <!-- Right: 2 Stacked row cards -->
+      <div class="card-stack">
 
-<!-- ==================== BATCH 3: MULTI-TYPE ==================== -->
-<div class="section-label">
-  Analysis, Guide & Longread <span class="count">3 NEW</span>
-</div>
+        <!-- Row Card 1: PAGCOR Guide -->
+        <a href="articles/best-pagcor-licensed-online-casinos.html" class="card-row">
+          <div class="card-img">
+            <img src="hero/best-pagcor-licensed-online-casinos-philippines-2026.png"
+                 alt="PAGCOR licensed online casinos verification guide"
+                 width="200" height="150" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="tag tag-guide">Guide</span>
+            <h3>Best PAGCOR Licensed Online Casinos Philippines 2026</h3>
+            <p class="card-meta">May 25, 2026 &middot; Score 9/10</p>
+          </div>
+        </a>
 
-<!-- FEATURED: Layer 3 Longread -->
-<div class="featured-article" id="article-manilabay">
-  <div class="article-image">
-    <img src="hero/manila-bay-4am-hidden-shift-ir-workers.png" alt="Manila Bay at 4 AM">
-  </div>
-  <div class="article-body">
-    <div class="article-meta">
-      <span class="tag tag-longread">Longread</span>
-      <span class="tag tag-new">New</span>
-      <span class="score">
-        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        10/10
-      </span>
-      <span>May 25, 2026</span>
-    </div>
-    <h2>Manila Bay at 4 AM: The Hidden Shift of IR Workers</h2>
-    <p class="article-dek">When the high rollers leave and the floor lights dim, a different kind of labor begins. A composite narrative drawn from public records, worker forums, and published reporting.</p>
-    <div style="background: var(--brick); color: #fff; padding: 8px 12px; border-radius: 4px; font-size: 12px; font-family: 'Helvetica Neue', sans-serif; margin: 12px 0;">
-      EDITOR'S NOTE: This is a composite narrative. Characters are composites; quotes are reconstructions.
-    </div>
-    <div class="article-source">Sources: UP Labor Research, PAGCOR Senate Submission, BusinessWorld, DOLE</div>
-    <button class="toggle-btn" onclick="toggleArticle('full-manilabay')">Read Full Article</button>
-    <div class="score-bar"><div class="score-bar-fill score-9" style="width:100%"></div></div>
-  </div>
-</div>
+        <!-- Row Card 2: Philippine GGR -->
+        <a href="articles/philippine-ggr-q1-2026.html" class="card-row">
+          <div class="card-img">
+            <img src="hero/philippine-ggr-falls-q1-2026-pagcor.png"
+                 alt="Philippine gross gaming revenue Q1 2026 chart"
+                 width="200" height="150" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="tag tag-news">News</span>
+            <h3>Philippine GGR Falls 15.8% to $1.42bn in Q1 2026</h3>
+            <p class="card-meta">May 18, 2026 &middot; Score 9/10</p>
+          </div>
+        </a>
 
-<div class="article-full" id="full-manilabay">
-  <h2>I. The Handover</h2>
-  <p>The shift change happens at 4 AM, and it smells like bleach and fried garlic.</p>
-  <p>A woman — call her Maricel — swipes her badge at a service entrance that faces not the glittering bay-view lobby but a loading dock behind a concrete wall. She has been making this walk for three years, six days a week, along a corridor that runs underneath the casino floor like a vein beneath skin.</p>
-  <p>Maricel is part of what Entertainment City's integrated resorts call the "graveyard auxiliary." Her team of eleven handles the deep clean. She earns PHP18,500 a month — PHP1,730 above minimum wage. That difference is what three years of seniority and a hazard differential for overnight work buys you.</p>
-  <h2>II. The Numbers Behind the Floor</h2>
-  <p>Entertainment City employs approximately 32,000 people across its four operational resorts. Published research from the University of the Philippines found that IR workers reported an average of 5.2 hours of sleep per night on work days — compared to 6.8 hours for Metro Manila workers overall. The majority live in Cavite, Laguna, or Bulacan, with one-way commutes averaging 90 minutes.</p>
-  <h2>III. The Dealer's Calculation</h2>
-  <p>A man — call him Jericho — deals baccarat. Base salary PHP24,000. With pooled tips, PHP28,000. His BPO friends earn PHP32,000-38,000 for daytime work. He stays for the subsidized meals (saving PHP4,000/month), staff clinic, and the unspoken resignation penalty clause.</p>
-  <h2>V. The Commute as Tax</h2>
-  <p>Workers not on shuttle routes rely on motorcycle taxis costing PHP150-250 per trip — up to PHP10,000 per month, roughly a third of a junior worker's take-home pay. An MMDA pilot P2P bus program ran for four months before funding lapsed.</p>
-  <h2>VII. 5:47 AM</h2>
-  <p>Maricel finishes at 5:30 AM. The ride to Bacoor takes 55 minutes. She will sleep until 1 PM, eat, help her niece with homework, and start the cycle again at 3 AM tomorrow. The integrated resort economy generated PHP44.52 billion in Q1 2026 alone. At 4 AM, it runs on Maricel, Jericho, and Grace.</p>
-</div>
-
-<div class="article-grid">
-
-  <!-- Layer 2: PIGO vs e-Games Analysis -->
-  <div class="article-card">
-    <div class="article-image">
-      <img src="hero/pigo-vs-egames-regulatory-maze-mapped-2026.png" alt="PIGO vs e-Games">
-    </div>
-    <div class="article-body">
-      <div class="article-meta">
-        <span class="tag tag-analysis">Analysis</span>
-        <span class="tag tag-new">New</span>
-        <span class="score">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          9/10
-        </span>
-        <span>May 25, 2026</span>
       </div>
-      <h2>PIGO vs e-Games: A Regulatory Maze, Mapped</h2>
-      <p class="article-dek">The Philippines has two parallel online gaming license systems under one regulator. How they differ, where they overlap, and why it matters.</p>
-      <div class="article-source">Sources: PAGCOR, COAP, Philippine Internet Gaming Association</div>
-      <button class="toggle-btn" onclick="toggleArticle('full-pigo')">Read Full Article</button>
-      <div class="score-bar"><div class="score-bar-fill score-9"></div></div>
-    </div>
-    <div class="article-full" id="full-pigo">
-      <p>The Philippines has something no other major Asian gaming jurisdiction does: two distinct regulatory pathways for legal online gaming, both administered by the same regulator.</p>
-      <h2>The two-track system</h2>
-      <p><strong>e-Games</strong> emerged first in the early 2000s as electronic gaming cafes, later expanding to online. <strong>PIGO</strong> is the successor to POGO, created after the 2024 ban — a domestically oriented license for online gaming serving Filipino players within the Philippines.</p>
-      <h2>Key differences</h2>
-      <p>e-Games: PHP25M minimum capital, PHP5M annual fee, ~38 licensees. PIGO: PHP100M minimum capital, PHP20M annual fee, ~12 licensees. PIGO includes sports betting; e-Games does not. Both compete for the same player pool.</p>
-      <h2>Three perspectives</h2>
-      <p><strong>Operators</strong> want unification. <strong>Regulators</strong> defend the dual system as transitional. <strong>Players</strong> (78% surveyed) can't tell the difference.</p>
-      <h2>Where it's heading</h2>
-      <p>Senate Bill 2814 includes a provision to rationalize all online gaming licenses into a unified framework within 24 months. The two-track system is widely seen as transitional, not permanent.</p>
+
     </div>
   </div>
+</section>
 
-  <!-- Evergreen Guide: PAGCOR Verification -->
-  <div class="article-card">
-    <div class="article-image">
-      <img src="hero/best-pagcor-licensed-online-casinos-philippines-2026.png" alt="PAGCOR License Guide">
-    </div>
-    <div class="article-body">
-      <div class="article-meta">
-        <span class="tag tag-guide">Guide</span>
-        <span class="tag tag-new">New</span>
-        <span class="score">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          9/10
-        </span>
-        <span>May 25, 2026</span>
+<!-- ============================================
+     LONGREADS — Cinematic Full-Width Card
+     ============================================ -->
+<section class="mb-section" id="longreads" aria-label="Longreads">
+  <div class="section-wrap">
+    <h2 class="section-title">Longreads</h2>
+    <a href="articles/manila-bay-4am-ir-workers.html" class="card-cinematic">
+      <img src="hero/manila-bay-4am-hidden-shift-ir-workers.png"
+           alt="Manila Bay waterfront at 4 AM — integrated resort workers"
+           width="1280" height="500" loading="lazy">
+      <div class="card-body">
+        <span class="tag tag-longread">Longread</span>
+        <h3>Manila Bay at 4 AM: The Hidden Shift Change Inside PH Integrated Resorts</h3>
+        <p class="card-dek">When the high rollers leave and the floor lights dim, a different kind of labor begins. An on-the-ground investigation into the workforce that powers Entertainment City around the clock.</p>
+        <p class="card-meta">May 25, 2026 &middot; 18 min read &middot; Score 10/10</p>
       </div>
-      <h2>Best PAGCOR-Licensed Online Casinos in the Philippines (2026): A Verification Guide</h2>
-      <p class="article-dek">Not a "top 10" listicle. A fact-based guide to verifying PAGCOR licenses, checking platform legitimacy, and knowing your protections as a player.</p>
-      <div class="article-source">Sources: PAGCOR Registry, DigiPlus IR, BSP AML Guidelines</div>
-      <button class="toggle-btn" onclick="toggleArticle('full-guide')">Read Full Article</button>
-      <div class="score-bar"><div class="score-bar-fill score-9"></div></div>
-    </div>
-    <div class="article-full" id="full-guide">
-      <h2>What PAGCOR licensing means</h2>
-      <p>Background checks on operators. RNG-tested games. Segregated player funds. AML compliance. A complaint channel to PAGCOR's Player Protection Office. It does NOT guarantee you will win money or that customer service will be good.</p>
-      <h2>How to verify a license</h2>
-      <p>Method 1: Visit pagcor.ph, search the licensee registry. Method 2: Check the license number format (eGames-YYYY-NNN or PIGO-YYYY-NNN). Method 3: Contact PAGCOR directly at licensing@pagcor.ph.</p>
-      <h2>Red flags for unlicensed platforms</h2>
-      <p>No PAGCOR number displayed. Foreign jurisdiction only. Crypto-only deposits. Guaranteed returns promises. Aggressive social media recruitment. Unusual TLDs (.xyz, .vip).</p>
-      <h2>The GCash factor</h2>
-      <p>GCash is integrated with 47 PAGCOR-licensed platforms. Its absence on a platform claiming to serve the Philippine market is a yellow flag.</p>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================
+     MORE STORIES — 3-Card Grid
+     ============================================ -->
+<section class="mb-section" id="more-stories" aria-label="More stories">
+  <div class="section-wrap">
+    <h2 class="section-title">More Stories</h2>
+    <div class="card-grid">
+
+      <!-- Card: Okada Play -->
+      <a href="articles/okada-play-commercial-launch.html" class="card">
+        <div class="card-img">
+          <img src="hero/okada-play-commercial-launch-philweb-tiger-resort-2026.png"
+               alt="Okada Play digital gaming platform launch"
+               width="640" height="360" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="tag tag-news">News</span>
+          <h3>Okada Play Goes Live: PhilWeb &amp; Tiger Resort Launch Digital Gaming Platform</h3>
+          <p class="card-dek">PhilWeb and Tiger Resort launch Okada Play, a new digital gaming platform bridging the gap between integrated resort floors and online accessibility.</p>
+          <p class="card-meta">May 20, 2026 &middot; Score 8/10</p>
+        </div>
+      </a>
+
+      <!-- Card: Altenar ArenaPlus -->
+      <a href="articles/altenar-arenaplus-sportsbook.html" class="card">
+        <div class="card-img">
+          <img src="hero/altenar-digiplus-arenaplus-sportsbook-philippines-2026.png"
+               alt="Altenar and DigiPlus ArenaPlus sportsbook partnership"
+               width="640" height="360" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="tag tag-news">News</span>
+          <h3>Altenar Powers DigiPlus ArenaPlus Sportsbook in the Philippines</h3>
+          <p class="card-dek">Malta-based sportsbook technology provider Altenar partners with DigiPlus to power the ArenaPlus sports betting platform, expanding digital sports wagering in the Philippine market.</p>
+          <p class="card-meta">May 21, 2026 &middot; Score 8/10</p>
+        </div>
+      </a>
+
+      <!-- Card: Philippine GGR (additional) -->
+      <a href="articles/philippine-ggr-q1-2026.html" class="card">
+        <div class="card-img">
+          <img src="hero/philippine-ggr-falls-q1-2026-pagcor.png"
+               alt="Philippine GGR data visualization for Q1 2026"
+               width="640" height="360" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="tag tag-news">News</span>
+          <h3>Philippine GGR Falls 15.8% to $1.42bn in Q1 2026</h3>
+          <p class="card-dek">Gross gaming revenue across the Philippine gaming sector dropped 15.8% year-on-year to $1.42 billion in the first quarter of 2026, raising questions about market trajectory.</p>
+          <p class="card-meta">May 18, 2026 &middot; Score 9/10</p>
+        </div>
+      </a>
+
     </div>
   </div>
+</section>
 
-</div>
-
-<!-- ==================== EXISTING ARTICLES (BATCH 1) ==================== -->
-<div class="section-label">
-  Earlier Coverage <span class="count">6 PUBLISHED</span>
-</div>
-
-<div class="article-grid">
-
-  <!-- Cambodia POGO -->
-  <div class="article-card">
-    <div class="article-image">
-      <img src="hero/cambodia-gaming-license-framework-pogo-operators-2026.png" alt="Cambodia Gaming License" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span>cambodia-pogo.png</span></div>';">
-    </div>
-    <div class="article-body">
-      <div class="article-meta">
-        <span class="tag tag-news">News</span>
-        <span class="score"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 9/10</span>
-        <span>May 24, 2026</span>
-      </div>
-      <h2>Cambodia Launches New Gaming License Framework Targeting Former POGO Operators</h2>
-      <p class="article-dek">Three-tier licensing system designed to regulate the influx of offshore gaming firms after the 2024 POGO ban.</p>
-      <div class="article-source">Sources: Reuters, Phnom Penh Post</div>
-      <a href="#" class="read-more">Read more</a>
-      <div class="score-bar"><div class="score-bar-fill score-9"></div></div>
+<!-- ============================================
+     NEWSLETTER CTA
+     ============================================ -->
+<section class="mb-section" aria-label="Newsletter signup">
+  <div class="section-wrap">
+    <div class="newsletter-cta">
+      <h2>Stay Ahead of Philippine Gaming</h2>
+      <p>Get the week's most important gaming industry stories, regulatory updates, and data analysis delivered to your inbox every Monday.</p>
+      <form class="cta-row" action="#" method="post" aria-label="Newsletter signup form">
+        <label for="newsletter-email" class="visually-hidden">Email address</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="your@email.com" required aria-label="Email address">
+        <button type="submit">Subscribe Free</button>
+      </form>
     </div>
   </div>
+</section>
 
-  <!-- PAGCOR Privatization -->
-  <div class="article-card">
-    <div class="article-image">
-      <img src="hero/pagcor-privatization-bill-senate-committee-2026.png" alt="PAGCOR Privatization" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span>pagcor-split.png</span></div>';">
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <!-- Brand column -->
+    <div class="footer-col">
+      <div class="footer-brand">PH Gaming <span>Intel</span></div>
+      <p class="footer-desc">Independent coverage of the Philippines gaming industry. News, analysis, data tools, and regulatory tracking for operators, investors, and researchers.</p>
     </div>
-    <div class="article-body">
-      <div class="article-meta">
-        <span class="tag tag-news">News</span>
-        <span class="score"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 9/10</span>
-        <span>May 24, 2026</span>
-      </div>
-      <h2>Senate Committee Approves PAGCOR Privatization Bill</h2>
-      <p class="article-dek">SB 2814 splits PAGCOR into an independent gaming commission and a privatized casino entity.</p>
-      <div class="article-source">Sources: Philippine Star, BusinessWorld</div>
-      <a href="#" class="read-more">Read more</a>
-      <div class="score-bar"><div class="score-bar-fill score-9"></div></div>
+
+    <!-- News column -->
+    <div class="footer-col">
+      <h4>News</h4>
+      <ul>
+        <li><a href="articles/cambodia-gaming-license-pogo-operators.html">Cambodia Gaming License</a></li>
+        <li><a href="articles/pagcor-privatization-bill-senate.html">PAGCOR Privatization</a></li>
+        <li><a href="articles/bloomberry-q1-2026-revenue.html">Bloomberry Q1 2026</a></li>
+        <li><a href="articles/okada-play-commercial-launch.html">Okada Play Launch</a></li>
+        <li><a href="articles/altenar-arenaplus-sportsbook.html">Altenar ArenaPlus</a></li>
+      </ul>
     </div>
+
+    <!-- Analysis column -->
+    <div class="footer-col">
+      <h4>Analysis</h4>
+      <ul>
+        <li><a href="articles/pigo-vs-egames-regulatory-maze.html">PIGO vs e-Games</a></li>
+        <li><a href="articles/best-pagcor-licensed-online-casinos.html">PAGCOR Casino Guide</a></li>
+        <li><a href="articles/philippine-ggr-q1-2026.html">Philippine GGR Q1</a></li>
+        <li><a href="articles/manila-bay-4am-ir-workers.html">Manila Bay 4AM</a></li>
+      </ul>
+    </div>
+
+    <!-- Tools & About column -->
+    <div class="footer-col">
+      <h4>Tools &amp; About</h4>
+      <ul>
+        <li><a href="#">Data Dashboard</a></li>
+        <li><a href="#">POGO Tracker</a></li>
+        <li><a href="#">License Checker</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
   </div>
 
-  <!-- Bloomberry Q1 -->
-  <div class="article-card">
-    <div class="article-image">
-      <img src="hero/bloomberry-resorts-q1-2026-revenue-solaire.png" alt="Bloomberry Q1" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span>bloomberry-q1.png</span></div>';">
-    </div>
-    <div class="article-body">
-      <div class="article-meta">
-        <span class="tag tag-news">News</span>
-        <span class="score"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 9/10</span>
-        <span>May 23, 2026</span>
-      </div>
-      <h2>Bloomberry Resorts Posts 18% Revenue Drop in Q1 2026</h2>
-      <p class="article-dek">Solaire operator reports PHP14.2bn in net revenues, VIP rolling chip volume down 26%.</p>
-      <div class="article-source">Sources: Bloomberry IR, Focus Gaming News</div>
-      <a href="#" class="read-more">Read more</a>
-      <div class="score-bar"><div class="score-bar-fill score-9"></div></div>
-    </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 PH Gaming Intel. Independent gaming journalism. Not affiliated with PAGCOR or any licensed operator. <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </div>
-
-  <!-- Philippine GGR -->
-  <div class="article-card">
-    <div class="article-image">
-      <img src="hero/philippine-ggr-falls-q1-2026-pagcor.png" alt="Philippine GGR Falls" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'img-placeholder\'><span>Image: philippine-ggr-falls-q1-2026-pagcor.png</span></div>';">
-    </div>
-    <div class="article-body">
-      <div class="article-meta">
-        <span class="tag tag-news">News</span>
-        <span class="score">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          9/10
-        </span>
-        <span>May 18, 2026</span>
-      </div>
-      <h2>Philippine GGR Falls 15.8% in Q1 2026 to $1.42bn</h2>
-      <p class="article-dek">PAGCOR reports a sharp contraction in Philippine gaming revenue for the first quarter of 2026, citing weak consumer spending and geopolitical headwinds.</p>
-      <div class="article-source">Source: Focus Gaming News / PAGCOR</div>
-      <button class="toggle-btn" onclick="toggleArticle('full-ggr')">Read Full Article</button>
-      <div class="score-bar"><div class="score-bar-fill score-9"></div></div>
-    </div>
-    <div class="article-full" id="full-ggr">
-      <p>The Philippine gaming industry recorded PHP87.60 billion (US$1.42 billion) in GGR during the first quarter of 2026, a 15.8 percent decline from PHP104.12 billion in Q1 2025, according to PAGCOR.</p>
-      <h2>Revenue decline led by electronic gaming</h2>
-      <p>The electronic gaming segment recorded a 22.43 percent year-on-year decline. Licensed casinos remained the single largest revenue source at PHP44.52 billion (50.83% of total GGR).</p>
-      <h2>Macro pressures</h2>
-      <p>PAGCOR chairman Tengco cited softer discretionary spending amid Middle East geopolitical tensions and rising inflationary pressures as key drivers of the contraction.</p>
-      <h2>Why it matters</h2>
-      <p>A 15.8 percent quarterly GGR contraction is one of the sharpest year-on-year drops in the post-pandemic era. The 22.43 percent fall in electronic gaming signals structural as well as cyclical pressure.</p>
-    </div>
-  </div>
-
-  <!-- Okada Play -->
-  <div class="article-card">
-    <div class="article-image">
-      <img src="hero/okada-play-commercial-launch-philweb-tiger-resort-2026.png" alt="Okada Play Launch" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'img-placeholder\'><span>Image: okada-play.png</span></div>';">
-    </div>
-    <div class="article-body">
-      <div class="article-meta">
-        <span class="tag tag-news">News</span>
-        <span class="score">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          8/10
-        </span>
-        <span>May 20, 2026</span>
-      </div>
-      <h2>Okada Manila, PhilWeb Launch Okada Play Online Gaming Platform</h2>
-      <p class="article-dek">PhilWeb Corp. and Tiger Resort officially roll out Okada Play, bringing Okada Manila's luxury gaming brand into the Philippine digital market.</p>
-      <div class="article-source">Source: The Manila Times</div>
-      <button class="toggle-btn" onclick="toggleArticle('full-okada')">Read Full Article</button>
-      <div class="score-bar"><div class="score-bar-fill score-8"></div></div>
-    </div>
-    <div class="article-full" id="full-okada">
-      <p>PhilWeb Corp. and Tiger Resort, Leisure and Entertainment Inc. have officially launched Okada Play, an online gaming platform designed to extend the Okada Manila integrated resort brand into the Philippine digital gaming market.</p>
-      <h2>Platform powered by PhilWeb</h2>
-      <p>Okada Play is powered by PhilWeb Corp.'s Online Gaming Platform (OGP) solution, a proprietary technology stack offering a full suite of gaming content, scalable infrastructure, and customer service support.</p>
-      <h2>Omnichannel strategy</h2>
-      <p>The rollout is described as a central pillar of Okada Manila's broader digital transformation strategy, converging land-based luxury gaming with digital channels.</p>
-      <h2>Why it matters</h2>
-      <p>The launch represents one of the most prominent examples of a Philippine IR operator using a domestic technology partner to compete directly in online gaming, signaling land-based and digital convergence.</p>
-    </div>
-  </div>
-
-  <!-- Altenar ArenaPlus -->
-  <div class="article-card">
-    <div class="article-image">
-      <img src="hero/altenar-digiplus-arenaplus-sportsbook-philippines-2026.png" alt="Altenar ArenaPlus" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'img-placeholder\'><span>Image: altenar-arenaplus.png</span></div>';">
-    </div>
-    <div class="article-body">
-      <div class="article-meta">
-        <span class="tag tag-news">News</span>
-        <span class="score">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          8/10
-        </span>
-        <span>May 21, 2026</span>
-      </div>
-      <h2>Altenar Powers ArenaPlus Sportsbook in Philippine Market Entry</h2>
-      <p class="article-dek">Malta-based sportsbook technology supplier Altenar has been selected to run DigiPlus Interactive's ArenaPlus platform in the Philippines.</p>
-      <div class="article-source">Source: Asia Gaming Brief</div>
-      <button class="toggle-btn" onclick="toggleArticle('full-altenar')">Read Full Article</button>
-      <div class="score-bar"><div class="score-bar-fill score-8"></div></div>
-    </div>
-    <div class="article-full" id="full-altenar">
-      <p>DigiPlus Interactive Corp. (PSE: PLUS) confirmed that it has selected sportsbook technology supplier Altenar to power ArenaPlus, its PAGCOR-licensed online sports betting platform.</p>
-      <h2>Fully managed solution</h2>
-      <p>ArenaPlus will migrate its sportsbook operations entirely to Altenar's fully managed platform, including customized localization, in-play betting, risk management, and compliance controls designed for mobile-first users.</p>
-      <h2>PBA player props</h2>
-      <p>Altenar's in-house statistical model will build out a player proposition bets portfolio for PBA games, targeting the Philippines' most-wagered domestic basketball league.</p>
-      <h2>Why it matters</h2>
-      <p>The deal reflects an accelerating trend of Southeast Asian operators outsourcing sportsbook technology to specialist managed-service providers rather than building proprietary stacks.</p>
-    </div>
-  </div>
-
-</div>
-
-</main>
-
-<footer>
-  <div class="footer-brand">PH Gaming <span>Intel</span></div>
-  <p>Philippines & Southeast Asia Gaming Intelligence</p>
-  <p style="margin-top: 16px;">
-    Content Preview | 9 Articles | Generated 2026-05-25<br>
-    <a href="#">Editorial Policy</a> &middot;
-    <a href="#">Responsible Gambling</a> &middot;
-    <a href="#">Affiliate Disclosure</a> &middot;
-    <a href="#">Privacy Policy</a>
-  </p>
-  <p style="margin-top: 16px; font-size: 11px; color: #4A5568;">
-    This is an internal preview page. Not for public distribution.<br>
-    Articles marked [EXCLUSIVE-UNVERIFIED] require editorial review before publication.
-  </p>
 </footer>
 
+<!-- ============================================
+     SCRIPTS
+     ============================================ -->
 <script>
-function toggleArticle(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const isOpen = el.classList.contains('open');
-  el.classList.toggle('open');
-  const btn = el.previousElementSibling?.querySelector?.('.toggle-btn')
-    || el.parentElement.querySelector('.toggle-btn');
-  if (btn) {
-    btn.textContent = isOpen ? 'Read Full Article' : 'Collapse';
-  }
-}
+(function() {
+  'use strict';
 
+  /* --- Sticky Header Scroll Effect --- */
+  var header = document.getElementById('siteHeader');
+  var scrollThreshold = 40;
+  var ticking = false;
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        if (window.scrollY > scrollThreshold) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* --- FAQ Toggle (for article pages using same script) --- */
+  document.addEventListener('click', function(e) {
+    var faqQ = e.target.closest('.faq-q');
+    if (faqQ) {
+      var item = faqQ.parentElement;
+      item.classList.toggle('open');
+    }
+  });
+
+  /* --- Mobile Menu Toggle --- */
+  var menuBtn = document.getElementById('mobileMenuBtn');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', function() {
+      var nav = document.querySelector('.nav-pills');
+      if (nav) {
+        nav.classList.toggle('mobile-open');
+      }
+    });
+  }
+})();
 </script>
 
 </body>
 </html>
-
