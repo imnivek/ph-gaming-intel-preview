@@ -270,8 +270,11 @@ body {
 }
 
 .article-header {
-  max-width: var(--content-w); margin: -80px auto 0; position: relative; z-index: 10;
-  padding: 0 24px;
+  max-width: var(--content-w); margin: -60px auto 0; position: relative; z-index: 10;
+  padding: 40px 40px 0;
+  background: var(--cream);
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -8px 32px rgba(0,0,0,.1);
 }
 .article-header .tag { margin-bottom: 16px; }
 .article-header h1 {
@@ -436,7 +439,7 @@ body {
   .newsletter-cta .cta-row { flex-direction: column; }
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .article-hero { height: 40vh; }
-  .article-header { margin-top: -60px; }
+  .article-header { margin-top: -40px; padding: 28px 24px 0; }
   .article-header h1 { font-size: 28px; }
   .stat-box { flex-direction: column; gap: 24px; margin: 32px 0; }
   .card-cinematic { min-height: 300px; }
